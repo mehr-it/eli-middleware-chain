@@ -1,0 +1,30 @@
+{
+  "name": "mehr-it/eli-middleware-chain",
+  "description": "Chaining for PSR-15 middleware",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christopher Mieger",
+      "email": "mail@mehr-it.info"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MehrIt\\EliMiddlewareChain\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MehrItMiddlewareChainTest\\": "test/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0"
+  }
+}
