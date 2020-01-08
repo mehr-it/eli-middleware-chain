@@ -1,4 +1,6 @@
 # PSR middleware chain
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mehr-it/eli-middleware-chain.svg?style=flat-square)](https://packagist.org/packages/mehr-it/eli-middleware-chain)
+[![Build Status](https://travis-ci.org/mehr-it/eli-middleware-chain.svg?branch=master)](https://travis-ci.org/mehr-it/eli-middleware-chain)
 
 When defining a request processing chain, usually more than one middleware is involved into the
 processing chain. The `ChainHandler` allows to define the PSR-15 middleware processing stack as 
