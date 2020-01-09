@@ -60,13 +60,18 @@
 			else
 				$this->first = false;
 
-			return $stack->valid() ?
-				(new DelegateHandler(
-					(($curr = $stack->current()) instanceof MiddlewareInterface) ? $curr : call_user_func($curr),
-					$this
-				))
-					->handle($request) :
-				$this->handler->handle($request);
+			if ($stack->valid()) {
+				$curr = $stack->current();
+
+				// call resolver if no middleware instance given
+				if (!($curr instanceof MiddlewareInterface))
+					$curr = call_user_func($curr);
+
+				return $curr->process($request, $this);
+			}
+			else {
+				return $this->handler->handle($request);
+			}
 		}
 
 
